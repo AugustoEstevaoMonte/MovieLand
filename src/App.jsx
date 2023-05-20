@@ -1,6 +1,7 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { useEffect, useState } from 'react';
+import { Box, Typography } from '@mui/material';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Cards from './components/Cards';
@@ -46,7 +47,15 @@ function App() {
       ) 
       : (
         <>
-          <h2>Movie not found!</h2>
+        <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        sx={{
+          marginTop: "8rem"
+        }}
+      ><h2>Movie not found!</h2></Box>
+          
         </>
       )}
     </ThemeProvider>
